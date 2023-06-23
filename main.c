@@ -9,7 +9,7 @@ int main()
     int answer;
     char textAnswer[50];
     while (1) {
-        system("cls"); 
+        system("cls");
 
         printf("1. Creates a file, each record of which contains data, the type of which is specified in a specific version\n");
         printf("2. Opens an existing file (or reports that the file specified by the name does not exist)\n");
@@ -42,19 +42,23 @@ int main()
         case 4:
             printf("Enter name of file: ");
             scanf("%s", &textAnswer);
-            readFile(textAnswer);
+            printStruct(textAnswer);
             _getch();
             break;
 
-        case 5: 
-            addRecord();
+        case 5:
+            printf("Enter name of file: ");
+            scanf("%s", &textAnswer);
+            addRecord(textAnswer);
             break;
 
         case 6:
             exit(0);
             break;
         case 7:
-            mostProfitableSessions();
+            printf("Enter name of file: ");
+            scanf("%s", &textAnswer);
+            mostProfitableSessions(textAnswer);
             _getch();
             break;
         default:
